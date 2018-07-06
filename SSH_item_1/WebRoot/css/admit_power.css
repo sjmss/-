@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+body{
+	text-align: center;
+}
+#txt{
+	border:1px solid black;
+	border-left: 0px;
+	height: auto;
+}
+
+#list{
+	border: 1px solid black;
+	height: auto;
+}
+
+#list ul li{
+	height:60px;
+	margin-top:20px;
+	list-style: none;
+	text-align: center;
+	line-height: 60px;
+	margin: 0 auto;
+}

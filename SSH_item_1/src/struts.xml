@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.objectFactory" value="spring" />
+
+    <package name="default" namespace="/" extends="struts-default">
+    		<interceptors>
+         		<interceptor name="goto_login" class="com.cn.intercepter.goto_login"></interceptor>
+         		<interceptor-stack name="my_stack">
+         			<!-- <interceptor-ref name="modelDriven"></interceptor-ref> -->
+         			<interceptor-ref name="goto_login"></interceptor-ref>
+         			<interceptor-ref name="defaultStack"></interceptor-ref>
+         		</interceptor-stack>	
+         	</interceptors>
+         	
+         	<default-interceptor-ref name="my_stack"></default-interceptor-ref>
+        <global-results>
+        	<result name="nologin">/jsp/login.jsp</result>
+        </global-results>
+         	 
+      
+        <!-- action区 -->
+       <action name="login" class="aa" method="login_varification"></action> 
+       <action name="bb" class="aa" method="login_varification"></action> 
+       <action name="add_Word" class="addw" method="add"></action>
+       <action name="add_rank" class="addr" method="add_rank"></action>
+       <action name="look_word" class="look_one" method="only_one"></action>
+       <action name="select_like_word" class="LikeWordName" method="like_word"></action>
+       <action name="word_and_catalog" class="word_catalog" method="wordInfo_catalogInfo"></action>
+    	<action name="validatecode" class="vdc" method="getValidateCode"></action>
+    	
+    	<action name="login2" class="aa" method="login_varification2">
+    		<result name="success">/jsp/Main.jsp</result>
+    		<result name="error">/jsp/error.jsp</result>
+    	</action>
+    	<action name="getSession" class="session_user" method="getName">
+    	</action>
+    	
+    <action name="delete_user" class="drop_session" method="delete_use"></action>
+    
+    <action name="select_username" class="selectName" method="getName_sum"></action>
+    <action name="insert_userinfo" class="add_info_user" method="add_userinfo"></action>
+   <!--下面是后台管理部分  -->
+   <!-- 查询全部用户信息 -->
+   	<action name="select_user_all" class="system_manage" method="select_user_all"></action>
+    <!-- 查询信息总数 -->
+    <action name="select_user_count" class="system_manage" method="select_user_count"></action>
+    
+    <!-- 查询某页的信息 -->
+    <action name="select_fy_infomation" class="system_manage" method="select_fy_infomation"></action>
+    <!-- 删除信息 -->
+    <action name="delete_infomation" class="system_manage" method="delete_infomation"></action>
+    </package>
+
+   
+</struts>

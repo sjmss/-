@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+body{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	position: absolute;
+	background-color: #e4e4e4;
+
+	
+}
+#cler_float{
+	clear: both;
+	height: 3px;
+	background: #00bcd4;
+	border: 0px;
+	margin-left:20px; 
+}
+#h3_head_txt{
+	float: left;
+	margin-left: 20px;
+}
+#head{
+	text-align: left;
+	position:relative;
+	width: 100%;
+	display: block;
+	z-index: 100;
+}
+#search{
+	margin-top:10px;
+	width:500px;
+	position:absolute;
+	left: 50%;
+	margin-left:-250px;
+	text-align: center;
+	z-index: 10;
+}
+#search_div{
+	height: 46px;
+	position: relative;
+	margin: 0 auto;
+	display: inline-block;
+}
+#search_div input{
+	 width: 400px;
+	height: 46px;
+	list-style: none;
+	position: relative;
+	float: left;
+	
+	/*css*/
+	
+	
+}
+#search_div button{
+	width: 100px;
+	height: 45px;
+
+
+	float: left;
+}
+#search_div:after{
+		content:"020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.tip_name{
+	line-height:30px;
+	text-align:left;
+	background:white;
+	width: 100%;
+	height: 30px;
+	margin: auto;
+	position: relative;
+	z-index: 10;
+	
+}
+#tip{
+	position:relative;
+	width: 500px;
+	margin:auto;
+	border-left:1px solid gray;
+	border-right:1px solid gray;
+	height:auto;
+	display: block;
+	z-index: 20;
+	
+}
+#none_form{
+	display: none;
+}

@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+#context{
+	width: 100%;
+	text-align:center;
+	position: relative;
+	top: 60px;
+	z-index:0; 
+
+	
+}
+.easy_div{
+	width: 80%;
+
+	margin: auto;
+	background: white;
+	position:relative;
+	top: 20px;
+	display: block;
+
+}
+.easy_div:after{
+	content:"020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	
+}
+.word_h1{
+	width:80%;
+	color: blue;
+	text-align: left;
+	position: relative;
+	left: 20px;
+}
+.word_txt{
+	text-align: left;
+	width:90%;
+	height:auto;
+	/*自动换行*/
+	word-wrap:break-word;
+	position: relative;
+	left: 30px;
+	bottom: 10px;
+}
+
+
+
+.word_dl{
+	float:left;
+	width: 50%;
+}
+.word_dl dt{
+	float: left;
+	width:40%;
+}
+.word_dl dd{
+	float: left;
+	width: 20%;
+}
+
+
+.catalog_div{
+	position:relative;
+	width: 80%;
+	margin: auto;
+	background: white;
+	top:40px;
+	height: auto;
+
+}
+.catalog_div:after{
+	content:"020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.word_ol{
+	display: inline-block;
+	float: left;
+	width: 30%;
+	
+}
+.word_ol li{
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	
+	
+	
+}
+.word_ul{
+	width: 40%;
+}
+.word_ul li{
+	text-align: left;
+}
+
+.catalog_context{
+	width: 80%;
+	text-align: left;
+	display:inline-block;
+	background: white;
+	margin:auto;
+	position: relative;
+	top: 100px;
+	margin-top: 10px;
+
+}
+.catalog1{
+	padding-left: 20px;
+}
+.catalog2{
+	padding-left: 30px;
+}
+.txt{
+	width: 90%;
+	margin: auto;
+}

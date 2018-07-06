@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+#Word_date{
+	width: 80%;
+	margin: auto;
+}
+/*首目录div样式(all)*/
+.rank1{
+	
+	width: 76%;
+	margin:auto;
+	padding-top:20px;
+    overflow: auto;
+    height: auto;
+}
+/*首目录样式文本框（目录名）（all）*/
+.rank1_input{
+	float:left;
+    display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset;
+    padding: 6px 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+/*首目录文本（目录内容）*/
+.rank1_text{
+	display:inline-block;
+	clear:both;
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+/*添加提示div*/
+.rank1_tip{
+	width: 80%;
+	height:40px;
+	position: relative;
+}
+/*添加子目录,及添加内容按钮css*/
+.add_rank,.add_message{display: block;}
+
+/*其他目录div(all)*/
+.rank_other{
+	width: 80%;
+	border-width:0px;
+	position:inherit;
+	clear:both;
+	left: 20px;
+	top: 30px;
+	margin: auto;
+	margin-top:20px;
+
+
+}
+/*其他目录名文本框css*/
+.rank_other_input{
+	height:40px;
+	width:200px;
+	border: none;
+	border-bottom: 1px solid;
+	float: left;
+
+
+}
+/*其他目录内容文本框*/
+.text{
+	width: 80%;
+	height: 400px;
+	position: relative;
+	margin-top: 10px;
+}
+/*删除目录按钮*/
+.delete_sun_rank{
+	float: left;
+	height:34px;
+}
+
+body{
+	position: relative;
+}

@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+#user_info{
+	float: right;
+	line-height: 50px;
+	position: relative;
+	z-index: 10;
+}
+
+#user_login{
+margin-right:100px;
+float: right;
+height: 50px;
+}
+
+#user_login span{
+
+	color: gray;
+}
+
+#user_login:after{
+	content:"020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	
+}
+.user_div{
+	float: left;
+	position: relative;
+	 top: 50%;
+      transform: translateY(-50%);
+	
+}
+.span_div{
+	border: 1px solid gray;
+	height: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.ul_z_index{
+	position:absolute;
+	z-index: 2;
+}
+

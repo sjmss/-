@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+body{
+	background: silver;
+}
+.form2_div{
+	width: 480px;
+	position: relative;
+	right:0px;
+	float:right;
+	top: 100px;
+	left: 50px;
+	border: 1px solid white;
+	color: white;
+	box-shadow:2px 2px 5px #ffffff;
+	height: 500px;
+}
+.validateCode{
+	width: 37%;
+	float: left;
+	height: 42px;
+	position: relative;
+
+}
+#validateImg{
+	float: left;
+	width: 162px;
+	height: 42px;
+	border: 1px solid gray;
+	margin-left: 5px;
+}
+#dim{
+	height: 40px;
+}
+#dim a{
+	line-height: 70px;
+}
+.help-use,.help_validateCode,.help-password,.help-password2{
+	clear:both;
+	height: 20px;
+	text-align: left;
+}
+#reg{
+	width: 100px;
+	margin: 0 auto;
+}
+#sub_div{
+	text-align: center;
+}
+#reg_tip{
+	position: relative;
+	top: 10px;
+}

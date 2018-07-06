@@ -1,0 +1,39 @@
+.fy_cen{
+	margin: 0 auto;
+}
+#fy_div{
+	text-align: center;
+}
+
+/*修改用户信息弹出层*/
+#update_div1{
+	position: fixed;
+	width:400px;
+	height: 300px;
+	top:50%;
+	margin-top:-150px;
+	left:50%;
+	margin-left:-200px;
+	 background: gray;
+	 
+}
+body{
+	text-align: center;
+}
+
+#update_but1{
+	position:absolute;
+	top:200px;
+	left:20px;
+	width:60px;
+	height: 40px;
+	
+}
+#update_but2
+{
+	position:absolute;
+	top:200px;
+	right:20px;
+	width:60px;
+	height: 40px;
+}
