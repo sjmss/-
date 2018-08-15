@@ -1,4 +1,12 @@
 
+//登录权限
+$(document).ajaxComplete(function(event,xhr,options){
+   var nologin=xhr.getResponseHeader("nologin");
+ if(nologin=="yes"){
+   window.location.href=xhr.getResponseHeader("url");
+ }
+});
+
 function Word_Add_Commit(){
 	//获取单词数据，名，公司，等
 	var word_name=$("#w_name").val();

@@ -12,7 +12,7 @@ public class Drop_User extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	public void delete_use(){
 		HttpServletRequest request=ServletActionContext.getRequest();
-		request.getSession().setAttribute("user", "");
+		request.getSession().setAttribute("user", null);
 		System.out.println("½áÊø");
 	}
 }

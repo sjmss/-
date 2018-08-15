@@ -1,5 +1,14 @@
 var max=0;
 
+//权限验证
+//异步请求,拦截的返回值(所有的json请求返回后执行的方法)  
+$(document).ajaxComplete(function(event,xhr,options){
+   var nologin=xhr.getResponseHeader("nologin");
+ if(nologin=="yes"){
+   window.location.href=xhr.getResponseHeader("url");
+ }
+});
+
 //开始读取全部用户信息表
 window.onload=function(){
 	//获取总共多少个信息
@@ -11,6 +20,11 @@ window.onload=function(){
 	//设置选中状态1
 	var csh=$("#fy").find("li")[1];
 	$(csh).attr("flag","1");*/
+	
+	
+
+
+
 };
 
 //上一页
@@ -66,8 +80,9 @@ function nextpage(){
 			
 			
 		},
-		error:function(){
-			layer.msg("服务器错误，请稍后重试");
+error:function(){
+			
+			layer.msg("服务器响应失败");
 		}
 		
 	})
@@ -131,9 +146,10 @@ function getcount(i){
 			}
 			
 		},
-		error:function(){
-			layer.msg("服务器错误，请稍后重试");
-		}
+	error:function(){
+				
+				layer.msg("服务器响应失败");
+			}
 		
 	})
 	//开始页数和结束页,根据数量改变
@@ -293,8 +309,9 @@ function inner_infomation(i){
 			
 		},
 		error:function(){
-			layer.msg("服务器错误，请稍后重试");
-		}
+					
+					layer.msg("服务器响应失败");
+				}
 		
 	})
 };
@@ -369,7 +386,8 @@ function select_max(){
 					
 				},
 				error:function(){
-					layer.msg("服务器错误，请稍后重试");
+					
+					layer.msg("服务器响应失败");
 				}
 				
 			})
@@ -398,7 +416,8 @@ function delete_info(i){
 			
 		},
 		error:function(){
-			layer.msg("服务器错误，请稍后重试");
+			
+			layer.msg("服务器响应失败");
 		}
 	})
 }

@@ -1,3 +1,12 @@
+
+//登录权限
+$(document).ajaxComplete(function(event,xhr,options){
+   var nologin=xhr.getResponseHeader("nologin");
+ if(nologin=="yes"){
+   window.location.href=xhr.getResponseHeader("url");
+ }
+});
+
 //验证码
 var codevalidate="";
 window.onload=function(){

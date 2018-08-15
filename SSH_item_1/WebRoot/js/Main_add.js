@@ -1,3 +1,6 @@
+$(document).ajaxComplete(function() {
+  　　alert("ajax");
+});
 function read_word(){
 	var par=window.location.search.substr(1);
 	if(par==""){}

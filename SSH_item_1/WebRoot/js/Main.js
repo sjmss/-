@@ -70,8 +70,6 @@ window.onload=function(){
 read_word();
 };
 
-
-
 function look_word_name(){
 
 	$(".tip_name").remove();

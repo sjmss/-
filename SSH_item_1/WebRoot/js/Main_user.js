@@ -1,3 +1,7 @@
+
+
+
+
 function getseesion(){
 	/*获取用户sesion*/
 	$.ajax({
@@ -17,6 +21,7 @@ function getseesion(){
 			}
 		},
 		error:function(error){
+		
 			layer.msg("服务器错误，请稍后重试");
 		}
 	});

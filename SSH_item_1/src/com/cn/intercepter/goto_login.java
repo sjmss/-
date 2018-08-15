@@ -1,6 +1,8 @@
 package com.cn.intercepter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -13,22 +15,35 @@ public class goto_login extends AbstractInterceptor {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String[] str={"select_user_all","login.jsp","login","add_Word","add_rank","look_word","select_like_word","word_and_catalog","validatecode","getSession","login2","delete_user","select_username","insert_userinfo","select_user_count","select_fy_infomation","delete_infomation"};
+	private String[] str={"login","login2","validatecode","select_username","insert_userinfo","getSession","word_and_catalog","select_like_word"};
 	@Override
 	public String intercept(ActionInvocation arg0) throws Exception {
 		System.out.println("拦截");
 		HttpServletRequest request=ServletActionContext.getRequest();
+		HttpServletResponse response=ServletActionContext.getResponse();
 		 Object ob = request.getSession().getAttribute("user");
-		String ac_name=arg0.getProxy().getActionName();
+		 String ac_name=arg0.getProxy().getActionName();
+		 System.out.println(ac_name);
+		 System.out.println(ob);
 		 if(ob==null){
 			
 			 if(check_url(ac_name)){
+				 System.out.println("请求通过");
 				 return arg0.invoke();
 			 }
 			 System.out.println("请求不允许");
+			 //sb.append(request.getScheme()).append("://").append(request.getServerName()).append(port).append(contextPath).append("/login");
+			 String path1=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/jsp/login.jsp";
+					
+			 response.setHeader("nologin", "yes");//告诉ajax这是重定向  
+             response.setHeader("url", path1);//重定向地址  
+             RequestDispatcher rd=request.getRequestDispatcher(path1);
+             rd.forward(request,response);
+             
+
 				 return "nologin";
 		 }
-		
+		 System.out.println("请求通过");
 		return arg0.invoke();
 	}
 	

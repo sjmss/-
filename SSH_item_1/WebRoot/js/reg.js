@@ -1,4 +1,9 @@
 var codevalidate="";
+
+
+
+
+
 window.onload=function(){
 	getValidateCode();
 	
