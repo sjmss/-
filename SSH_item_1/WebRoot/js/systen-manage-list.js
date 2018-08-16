@@ -6,7 +6,7 @@ function exit_log(){
 		beforeSend:loading1(),
 		complete:closs_loading(),
 		success:function(){
-			var url="/SSH_item_1/jsp/Main.jsp";
+			var url="/SSH_item_1/jsp/login.jsp";
 			window.location.href=url;
 		},
 		error:function(){
