@@ -185,7 +185,7 @@ function key_top(){
 					$(bb[i]).css("background","white");			//这里有一段颜色
 					var dd=$("#tip").find(".tip_name:last");
 					$(dd).attr("flag",true);
-					$(dd).css("background","gray");				//这里有一段颜色
+					$(dd).css("background","#f8f8f8");				//这里有一段颜色
 					$("#ipt").val($(dd).html());
 					return;
 				}
@@ -195,7 +195,7 @@ function key_top(){
 					//选取上一个元素
 					var ee=$(bb[i-1]);
 					$(ee).attr("flag",true);
-					$(ee).css("background","gray");				//这里有一段颜色
+					$(ee).css("background","#f8f8f8");				//这里有一段颜色
 					$("#ipt").val($(ee).html());
 					return;
 				}
@@ -204,7 +204,7 @@ function key_top(){
 		//这里执行有值但没有被选中的情况
 		var ff=$("#tip").find(".tip_name:last");
 		$(ff).attr("flag",true);
-		$(ff).css("background","gray");							//这里有一段颜色
+		$(ff).css("background","#f8f8f8");							//这里有一段颜色
 		$("#ipt").val($(ff).html());
 	}
 }
@@ -233,7 +233,7 @@ function key_down(){
 					$(bb[i]).css("background","white");			//这里有一段颜色
 					var dd=$("#tip").find(".tip_name:first");
 					$(dd).attr("flag",true);
-					$(dd).css("background","gray");				//这里有一段颜色
+					$(dd).css("background","#f8f8f8");				//这里有一段颜色
 					$("#ipt").val($(dd).html());
 					return;
 				}
@@ -243,7 +243,7 @@ function key_down(){
 					//选取下一个元素
 					var ee=$(bb[i+1]);
 					$(ee).attr("flag",true);
-					$(ee).css("background","gray");	
+					$(ee).css("background","#f8f8f8");	
 					$("#ipt").val($(ee).html());
 					return;//这里有一段颜色
 				}
@@ -252,7 +252,7 @@ function key_down(){
 		//这里执行有值但没有被选中的情况
 		var ff=$("#tip").find(".tip_name:first");
 		$(ff).attr("flag",true);
-		$(ff).css("background","gray");							//这里有一段颜色
+		$(ff).css("background","#f8f8f8");							//这里有一段颜色
 		$("#ipt").val($(ff).html());
 	}
 	//end

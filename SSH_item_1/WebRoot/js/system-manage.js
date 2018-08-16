@@ -11,7 +11,7 @@ $(document).ajaxComplete(function(event,xhr,options){
 
 //开始读取全部用户信息表
 window.onload=function(){
-	//获取总共多少个信息
+	//获取用户信息，创建用户信息div
 	getcount(1);
 	/*fy_sum(1,9,1);
 	//页面载入按钮初始状态
@@ -21,8 +21,11 @@ window.onload=function(){
 	var csh=$("#fy").find("li")[1];
 	$(csh).attr("flag","1");*/
 	
-	
-
+	$(".list_menu div a").click(function(){
+		$(".list_menu div a").css("background","#FFF");
+		$(this).css("background","#F5DEB3");
+		
+	})
 
 
 };

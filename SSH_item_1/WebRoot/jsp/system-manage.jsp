@@ -14,38 +14,49 @@
 	<script type="text/javascript" src="../layer/layer.js"></script>	
 	
 	<script type="text/javascript" src="../js/system-manage.js"></script>	
-
+	<script type="text/javascript" src="../js/systen-manage-list.js"></script>
 	<link rel="stylesheet" href="../css/system-manage.css">
 </head>
 <body>
 		<h3 class="text-center">
 				系统管理
 			</h3>
-<div class="container">
+			
+	<br>
+	<br>
+	<br>
+	
+<div class="padding_15">
 	<div class="row clearfix">
-		<div class="col-md-3 column">
-			<div class="list-group">
-				 <a href="#" class="list-group-item active">管理</a>
-				<div class="list-group-item">
-					用户信息
+		<div class="col-md-2 column list_menu">
+				<div>
+				 <div href="#" class="list-group-item active">
+				 				<h4>后台管理</h3>
+				 				
+				 				<h5>admit</h4>
+				 				<h6>【管理员】</h5>
+				 	
+				 </div>
+				<div>
+				 <a href="#" class="list-group-item">	用户信息</a>
 				</div>
-				<div class="list-group-item">
-					单词信息
+				<div>
+				 <a href="#" class="list-group-item">	单词信息</a>
 				</div>
-				<div class="list-group-item">
-					 通知
+				<div>
+				 <a href="#" class="list-group-item">	 通知</a>
 				</div>
-				<div class="list-group-item">
-					 设置
+				<div>
+				 <a href="#" class="list-group-item">	 设置</a>
 				</div>  
-				<div class="list-group-item">
-					 退出登录
+				<div>
+				 <a href="javascript:exit_log()" class="list-group-item">	 退出登录</a>
 				</div> 
 				
 				
 			</div>
 		</div>
-		<div class="col-md-9 column">
+		<div class="col-md-10 column">
 		
 	
 			<table class="table table-bordered" id="t1">
@@ -78,6 +89,9 @@
 		</div>
 	</div>
 </div>
+
+
+
 
 
 	
