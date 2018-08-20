@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
 
+import com.cn.bean.Word_info;
 import com.cn.bean.user_userinfo;
 import com.cn.service.I_system_manage_service;
 import com.opensymphony.xwork2.ActionSupport;
@@ -81,5 +82,18 @@ public class system_manage extends ActionSupport{
 		//删除信息
 	public void delete_infomation() {
 		isms.delete_infomation(index);
+	}
+	
+	//查询单词所有信息
+	public void select_wordinfo_all() throws IOException {
+	
+		List<Word_info> list = isms.select_wordinfo_all();
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setHeader("contentType", "text/html; charset=utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter pw=response.getWriter();
+		pw.print(list);
+		pw.flush();
+		pw.close();
 	}
 }

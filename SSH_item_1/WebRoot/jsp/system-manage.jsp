@@ -33,15 +33,15 @@
 				 <div href="#" class="list-group-item active">
 				 				<h4>后台管理</h3>
 				 				
-				 				<h5>admit</h4>
+				 				<h5 id="user_ID"></h4>
 				 				<h6>【管理员】</h5>
 				 	
 				 </div>
 				<div>
-				 <a href="#" class="list-group-item">	用户信息</a>
+				 <a href="javascript:create_rigth_page();" class="list-group-item" style="background: rgb(245, 222, 179)">	用户信息</a>
 				</div>
 				<div>
-				 <a href="#" class="list-group-item">	单词信息</a>
+				 <a href="javascript:Get_Word_Info();" class="list-group-item">	单词信息</a>
 				</div>
 				<div>
 				 <a href="#" class="list-group-item">	 通知</a>
@@ -56,10 +56,10 @@
 				
 			</div>
 		</div>
-		<div class="col-md-10 column">
+		<div class="col-md-10 column" id="rigth_page">
 		
 	
-			<table class="table table-bordered" id="t1">
+			<table class="table table-striped table-bordered" id="t1">
 				<thead>
 					<tr>
 						<th>

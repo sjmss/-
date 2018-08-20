@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.cn.bean.Word_info;
 import com.cn.bean.user_userinfo;
 @Service
 public interface I_system_manage_service {
@@ -15,4 +16,6 @@ public interface I_system_manage_service {
 	public List<user_userinfo> select_fy(int n);
 	//删除信息
 	public void delete_infomation(int id);
+	//查询单词信息
+	public List<Word_info> select_wordinfo_all();
 }

@@ -72,14 +72,15 @@ public class Word_info {
 	public void setW_Context(String w_Context) {
 		this.w_Context = w_Context;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Word_info [w_id=" + w_id + ", w_EnName=" + w_EnName
-				+ ", w_ChName=" + w_ChName + ", w_Company=" + w_Company
-				+ ", w_Context=" + w_Context + "]";
+		return " {\"w_id\":\"" + w_id + "\", \"w_EnName\":\"" + w_EnName + "\", \"w_ChName\":\"" + w_ChName + "\", \"w_Company\":\""
+				+ w_Company + "\", \"w_Context\":\"" + w_Context + "\"}";
 	}
+	
+	
+
 	
 	
 	

@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.derby.tools.sysinfo;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
+import com.cn.bean.Word_info;
 import com.cn.bean.user_userinfo;
 @Repository
 public class system_manage_imp implements I_system_manage {
@@ -53,6 +55,19 @@ public class system_manage_imp implements I_system_manage {
 		Session session=GetSession();
 		Object aa = session.get(user_userinfo.class, id);
 		session.delete(aa);
+	}
+	//查询所有单词基本信息
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Word_info> select_wordinfo_all() {
+		// TODO Auto-generated method stub
+		Session session =GetSession();
+		
+		
+		Query q=(Query) session.createQuery("from Word_info");
+		List<Word_info> list=q.list();
+		System.out.println(list);
+		return list;
 	}
 
 }

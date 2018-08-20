@@ -11,8 +11,11 @@ $(document).ajaxComplete(function(event,xhr,options){
 
 //开始读取全部用户信息表
 window.onload=function(){
-	//获取用户信息，创建用户信息div
-	getcount(1);
+	//获取登录用户
+	getseesion();
+	//获取用户信息，创建用户信息div\
+	create_rigth_page();
+	
 	/*fy_sum(1,9,1);
 	//页面载入按钮初始状态
 	var node_one=document.getElementById("fy").getElementsByTagName("li")[1].getElementsByTagName("a")[0];
@@ -142,7 +145,6 @@ function getcount(i){
 			else{
 			//根据数量添加页数
 			var max=getmax(parseInt(data));
-			
 			add_startandstop(i,max);
 			inner_infomation(i);
 			select_max();
@@ -322,46 +324,87 @@ function inner_infomation(i){
 
 function add_infomation(data){
 	
-		var u = eval('('+data+')'); 
-		//json=eval("("+data+")");
-	
-		$("#t2").remove();
-		var tbody=document.createElement("tbody");
-					tbody.setAttribute("id", "t2");
-		document.getElementById("t1").appendChild(tbody);
-		for(var i=0;i<u.length;i++){
-			var tr=document.createElement("tr");
+	var u = eval('('+data+')'); 
+	//json=eval("("+data+")");
+
+	$("#t2").remove();
+	var tbody=document.createElement("tbody");
+				tbody.setAttribute("id", "t2");
+	document.getElementById("t1").appendChild(tbody);
+	for(var i=0;i<u.length;i++){
+		var tr=document.createElement("tr");
+		
+		var td2=document.createElement("td");
+		var td3=document.createElement("td");
+		var td5=document.createElement("td");
+		var td4=document.createElement("td");
 			
-			var td2=document.createElement("td");
-			var td3=document.createElement("td");
-			var td5=document.createElement("td");
-			var td4=document.createElement("td");
-				
-				$(td2).append(u[i].wq_id);
-				$(td3).append(u[i].wq_user);
-				$(td5).append(u[i].wq_password);
-			var update=document.createElement("a");
-		
-			update.setAttribute("href", "javascript:void(0)");
-		
-			var delete1=document.createElement("a");
-				delete1.setAttribute("onclick", "delete_info(this)");
-				update.setAttribute("onclick","update_userinfo(this)")
-				$(update).append("修改");
-				$(delete1).append("删除");
-				update_userinfo
-				td4.appendChild(update);
-				td4.append("  ");
-				td4.appendChild(delete1);
-		
-				tr.appendChild(td2);
-				tr.appendChild(td3);
-				tr.appendChild(td5);
-				tr.appendChild(td4);
-				tbody.appendChild(tr);
-		}
-		
-		document.getElementById("t1").appendChild(tbody);
+			$(td2).append(u[i].wq_id);
+			$(td3).append(u[i].wq_user);
+			$(td5).append(u[i].wq_password);
+		var update=document.createElement("a");
+	
+		update.setAttribute("href", "javascript:void(0)");
+	
+		var delete1=document.createElement("a");
+			delete1.setAttribute("onclick", "delete_info(this)");
+			update.setAttribute("onclick","update_userinfo(this)")
+			$(update).append("修改");
+			$(delete1).append("删除");
+			update_userinfo
+			td4.appendChild(update);
+			td4.append("  ");
+			td4.appendChild(delete1);
+	
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			tr.appendChild(td5);
+			tr.appendChild(td4);
+			tbody.appendChild(tr);
+	}
+	
+	document.getElementById("t1").appendChild(tbody);
+}
+
+//创建
+function create_rigth_page(){
+	$("#t1,#fy_div").remove();
+	
+	var tab=document.createElement("table");
+	tab.setAttribute("class","table table-bordered");
+	tab.setAttribute("id","t1");
+document.getElementById("rigth_page").appendChild(tab);
+var thead=document.createElement("thead");
+tab.appendChild(thead);
+var tr=document.createElement("tr");
+thead.appendChild(tr);
+var th1=document.createElement("th");
+th1.append("编号");
+tr.appendChild(th1);
+var th2=document.createElement("th");
+th2.append("用户名");
+tr.appendChild(th2);
+var th3=document.createElement("th");
+th3.append("密码");
+tr.appendChild(th3);
+var th4=document.createElement("th");
+th4.append("操作");
+tr.appendChild(th4);
+
+	var div=document.createElement("div");
+	div.setAttribute("id","fy_div");
+	document.getElementById("rigth_page").appendChild(div);
+	
+	var ul=document.createElement("ul");
+	ul.setAttribute("class","pagination fy_cen");
+	ul.setAttribute("id","fy");
+	div.appendChild(ul);
+	
+	
+	getcount(1);
+	
+	
+
 
 }
 

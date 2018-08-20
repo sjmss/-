@@ -14,3 +14,113 @@ function exit_log(){
 		}
 	});
 }
+
+//获取用户
+function getseesion(){
+	/*获取用户sesion*/
+	$.ajax({
+		url:"getSession",
+		type:"post",
+		beforeSend:loading1(),
+		complete:closs_loading(),
+		success:function(data){
+			
+			if(data=="null"||data==""){
+				
+			}
+			else{
+			
+				$("#user_ID").html("欢迎："+data);
+				
+			}
+		},
+		error:function(error){
+		
+			layer.msg("服务器错误，请稍后重试");
+		}
+	});
+}
+
+//获取单词信息
+function Get_Word_Info(){
+	$.ajax({
+		url:"select_wordinfo_all",
+		type:"post",
+		beforeSend:loading1(),
+		complete:closs_loading(),
+		success:function(data){
+			
+			create_word_info(data);
+		},
+	error:function(){
+		layer.msg("服务器错误，请稍后重试");
+	}
+	});
+}
+
+//创建单词信息表
+function create_word_info(data){
+	$("#t1,#fy_div").remove();
+
+	/*document.createElement("br");
+	document.getElementById("context").appendChild(br3);*/
+	var tab=document.createElement("table");
+		tab.setAttribute("class","table table-bordered");
+		tab.setAttribute("id","t1");
+	document.getElementById("rigth_page").appendChild(tab);
+	var thead=document.createElement("thead");
+	tab.appendChild(thead);
+	var tr=document.createElement("tr");
+	thead.appendChild(tr);
+	var th1=document.createElement("th");
+	th1.append("单词ID");
+	tr.appendChild(th1);
+	var th2=document.createElement("th");
+	th2.append("英语名称");
+	tr.appendChild(th2);
+	var th3=document.createElement("th");
+	th3.append("中文名称");
+	tr.appendChild(th3);
+	var th4=document.createElement("th");
+	th4.append("所属公司");
+	tr.appendChild(th4);
+	var th5=document.createElement("th");
+	th5.append("简介");
+	tr.appendChild(th5);
+	
+	
+	var obj = eval("("+data+")");
+		
+		var tbody=document.createElement("tbody");
+		tbody.setAttribute("id","t2")
+		tbody.setAttribute("class","table table-striped table-bordered");
+		tab.appendChild(tbody);
+	
+	for(var i=0;i<obj.length;i++){
+			var tr=document.createElement("tr");
+			tbody.appendChild(tr);
+			var td=document.createElement("td");
+			td.append(obj[i].w_id);
+			tr.appendChild(td);
+			
+			var td=document.createElement("td");
+			td.append(obj[i].w_EnName);
+			tr.appendChild(td);
+			
+			var td=document.createElement("td");
+			td.append(obj[i].w_ChName);
+			tr.appendChild(td);
+			
+			var td=document.createElement("td");
+			td.append(obj[i].w_Company);
+			tr.appendChild(td);
+			
+			var td=document.createElement("td");
+			td.append(obj[i].w_Context);
+			tr.appendChild(td);
+		
+	}
+	
+	
+	
+}

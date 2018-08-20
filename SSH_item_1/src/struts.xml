@@ -54,6 +54,8 @@
     <action name="select_fy_infomation" class="system_manage" method="select_fy_infomation"></action>
     <!-- 删除信息 -->
     <action name="delete_infomation" class="system_manage" method="delete_infomation"></action>
+    <!-- 查询单词全部信息 -->
+    <action name="select_wordinfo_all" class="system_manage" method="select_wordinfo_all"></action>
     </package>
 
    

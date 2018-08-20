@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.cn.DAO.I_system_manage;
+import com.cn.bean.Word_info;
 import com.cn.bean.user_userinfo;
 @Service
 public class system_manage_service_imp implements I_system_manage_service {
@@ -31,6 +32,13 @@ private I_system_manage isms;
 	@Override
 	public void delete_infomation(int id) {
 		isms.delete_infomation(id);
+		
+	}
+	//查询全部单词信息
+	@Override
+	public List<Word_info> select_wordinfo_all() {
+	
+		return isms.select_wordinfo_all();
 		
 	}
 
