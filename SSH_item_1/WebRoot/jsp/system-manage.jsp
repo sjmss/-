@@ -61,7 +61,8 @@
 	
 			<table class="table table-striped table-bordered" id="t1">
 				<thead>
-					<tr>
+					<tr>/
+					
 						<th>
 							编号
 						</th>
