@@ -49,13 +49,28 @@
    	<action name="select_user_all" class="system_manage" method="select_user_all"></action>
     <!-- 查询信息总数 -->
     <action name="select_user_count" class="system_manage" method="select_user_count"></action>
-    
     <!-- 查询某页的信息 -->
     <action name="select_fy_infomation" class="system_manage" method="select_fy_infomation"></action>
     <!-- 删除信息 -->
     <action name="delete_infomation" class="system_manage" method="delete_infomation"></action>
-    <!-- 查询单词全部信息 -->
-    <action name="select_wordinfo_all" class="system_manage" method="select_wordinfo_all"></action>
+   
+   <!-- 下面是关于单词信息表的操作请求 -->
+   		<!-- 查询单词全部信息 -->
+    	<action name="select_wordinfo_all" class="system_manage" method="select_wordinfo_all"></action>
+   		<!-- 查询单词某页信息 -->
+   		<action name="select_Wordinfo_n" class="system_manage" method="select_wordinfo_n"></action>
+   		<!-- 查询单词信息页数 -->
+   		<action name="select_wordinfo_count" class="system_manage" method="select_wordinfo_count"></action>
+   		<!-- 删除单词信息 -->
+   		<action name="delete_word" class="system_manage" method="delete_word"></action>
+   
+   <!-- 下面是通知部分操作请求 -->
+   		<!-- 查询某页的通知 -->
+   <action name="select_advice_n" class="system_manage" method="select_advice_n"></action>
+   		<!-- 查询通知的页数 -->
+   <action name="select_advice_count" class="system_manage" method="select_advice_count"></action>
+		<!-- 删除通知信息 -->
+	<action name="delete_advice" class="system_manage" method="delete_advice"></action>
     </package>
 
    

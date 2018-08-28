@@ -1,5 +1,8 @@
 package com.cn.service;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +16,12 @@ public class add_userinfo_serviceimp implements add_userinfo_service {
 	@AdviceInfomation(context="ÓÃ»§×¢²á")
 	@Override
 	public int save_userinfo(user_userinfo uu) {
-		return au.add(uu);
+		int i=au.add(uu);
+		
+		HttpServletRequest request=ServletActionContext.getRequest();
+		request.getSession().setAttribute("user", uu.getWq_user());
+		
+		return i;
 	}
 
 }

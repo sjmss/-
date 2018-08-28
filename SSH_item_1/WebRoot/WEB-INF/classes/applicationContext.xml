@@ -36,6 +36,7 @@
 				<value>com.cn.bean.user_userinfo</value>
 				<value>com.cn.bean.Word_info</value>
 				<value>com.cn.bean.Word_Catalogue_Context</value>
+				<value>com.cn.bean.Advice_Infomation</value>
 			</list>
 		</property>
 		<!-- 设置方言 -->
@@ -43,7 +44,7 @@
 			<props>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.format_sql">true</prop>
-				<!-- <prop key="hibernate.hbm2ddl.auto">create</prop> -->
+				<!--  <prop key="hibernate.hbm2ddl.auto">create</prop> -->
 			</props>
 		</property>
 	</bean>

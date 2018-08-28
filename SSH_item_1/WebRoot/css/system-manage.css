@@ -42,4 +42,22 @@ body{
 	padding-right: 15px;
     padding-left: 15px;
 }
+.list-group-item {
+  
+   
+}
+/*列表点击样式*/
+.click_color{
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+	background-color:rgb(245, 222, 179);
+	color: #555;
+	text-decoration: none;
+}
+ a:link { text-decoration: none;}
+　　 a:active { text-decoration:blink}
+　　 a:hover { text-decoration:underline;} 
+　　 a:visited { text-decoration: none;}
 

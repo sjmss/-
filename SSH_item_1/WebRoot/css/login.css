@@ -1,9 +1,17 @@
 @CHARSET "UTF-8";
 body{
-	background: url("../img/search_bg.png");
-	background-repeat: no-repeat;
-	background-size:cover;
-	background-position: center;
+	/* 固定图像（设置这个保持欧朋，ff的background-position生效） */
+    background-attachment:fixed;
+    /*图像*/
+    background-image: url(../img/search_bg.png);
+    /*不平铺（重复）*/
+    background-repeat: no-repeat;
+    /*图片尺寸*/
+    background-size:cover;
+    /*图片定位*/
+    background-position: center center;
+
+    
 }
 .validateCode{
 	width: 37%;
@@ -47,11 +55,11 @@ body{
 	margin-left: 30px;
 }
 #cler_f:after{
-	content:"020";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
+	content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
 }
 #cler_f{
 	zoom:1;
@@ -72,6 +80,7 @@ body{
 	display: inline-block;
 	box-shadow:1px 3px 5px #888888;
 	color: black;
+	z-index: 10;
 }
 
 

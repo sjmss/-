@@ -113,7 +113,7 @@ function submit(){
 			else{
 
 					  
-					  layer.msg("用户名或密码错误！");
+				layer.msg("用户名或密码错误！");
            
 			}
 		},

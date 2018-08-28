@@ -1,5 +1,6 @@
 package com.cn.control;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,8 @@ import com.cn.bean.user_userinfo;
 import com.cn.service.add_userinfo_service;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+
+import freemarker.template.SimpleDate;
 @Component("add_info_user")
 public class insert_useinfo extends ActionSupport implements ModelDriven<user_userinfo> {
 	private static final long serialVersionUID = 1L;
@@ -21,11 +24,12 @@ public class insert_useinfo extends ActionSupport implements ModelDriven<user_us
 	@Autowired
 	private add_userinfo_service au;
 	public void add_userinfo(){
-		uu.setWq_data(new Date());
+		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time = sf.format(new Date());
+		uu.setWq_data(time);
 		au.save_userinfo(uu);
 		//µÇÂ¼µ½Ö÷Ò³£¬
-		HttpServletRequest request=ServletActionContext.getRequest();
-		request.getSession().setAttribute("user", uu.getWq_user());
+		
 		
 	}
 	

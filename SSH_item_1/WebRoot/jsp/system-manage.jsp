@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
 	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-
 	<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<!-- 前端框架 -->
 	<script type="text/javascript" src="../layer/layer.js"></script>	
@@ -38,17 +37,14 @@
 				 	
 				 </div>
 				<div>
-				 <a href="javascript:create_rigth_page();" class="list-group-item" style="background: rgb(245, 222, 179)">	用户信息</a>
+				 <a href="javascript:create_rigth_page();" class="click_color">	用户信息</a>
 				</div>
 				<div>
 				 <a href="javascript:Get_Word_Info();" class="list-group-item">	单词信息</a>
 				</div>
 				<div>
-				 <a href="#" class="list-group-item">	 通知</a>
+				 <a href="javascript:create_advice_infomation()" class="list-group-item">	 通知</a>
 				</div>
-				<div>
-				 <a href="#" class="list-group-item">	 设置</a>
-				</div>  
 				<div>
 				 <a href="javascript:exit_log()" class="list-group-item">	 退出登录</a>
 				</div> 
@@ -61,8 +57,7 @@
 	
 			<table class="table table-striped table-bordered" id="t1">
 				<thead>
-					<tr>/
-					
+					<tr>
 						<th>
 							编号
 						</th>

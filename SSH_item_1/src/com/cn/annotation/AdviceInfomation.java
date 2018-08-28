@@ -16,5 +16,5 @@ import com.cn.advice.Get_User_Info;
 public @interface AdviceInfomation {
 	
 	//事件
-	public String context() default "未定义";
+	public String context() default "";
 }

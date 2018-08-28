@@ -39,34 +39,28 @@ function create_but(userName){
 		//内部i
 	var ul1=document.createElement("ul");
 		ul1.setAttribute("class","dropdown-menu ul_z_index");
-		var li1=document.createElement("li");
-			var a1=document.createElement("a");
-				$(a1).append("个人信息");
-				a1.setAttribute("href", "#");		//个人信息地址，暂留
+		
 				
 		var li2=document.createElement("li");
 				var a2=document.createElement("a");
 				$(a2).append("后台管理");
 				a2.setAttribute("href", "/SSH_item_1/jsp/system-manage.jsp");		//后台管理地址，暂留
 				
-		var li3=document.createElement("li");
-				var a3=document.createElement("a");
-				$(a3).append("设置");
-				a3.setAttribute("href", "#");		//设置地址，暂留
+		
 				
 		var li4=document.createElement("li");
 				var a4=document.createElement("a");
 				$(a4).append("退出登录");
 				a4.setAttribute("href", "javascript:exit_log()");		//设置地址，暂留
 				
-				li1.appendChild(a1);
+				
 				li2.appendChild(a2);
-				li3.appendChild(a3);
+				
 				li4.appendChild(a4);
 				
-				ul1.appendChild(li1);
+				
 				ul1.appendChild(li2);
-				ul1.appendChild(li3);
+				
 				ul1.appendChild(li4);
 				
 				div1.appendChild(button1);

@@ -3,17 +3,18 @@ package com.cn.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cn.DAO.select_name;
+import com.cn.DAO.Advice_dao;
 import com.cn.annotation.AdviceInfomation;
-
+import com.cn.bean.Advice_Infomation;
 @Component
-public class Select_Name_imp implements Select_Name {
+public class Advice_Server_imp implements Advice_server {
 	@Autowired
-	private select_name sn;
-	@AdviceInfomation
+	private Advice_dao ad;
+	//ÃÌº”»’÷æ
 	@Override
-	public int getName(String name) {
-		return sn.getName(name);
+	public void add(Advice_Infomation ai) {
+		ad.add(ai);
+
 	}
 
 }
